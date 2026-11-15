@@ -1,0 +1,8 @@
+# Source repos whose _posts/*.md are imported into this site's blog.
+# The sync script (scripts/sync_source_posts.py) copies any post that does
+# not already exist locally, stamps it with source_repo + canonical_url,
+# and the GitHub Action commits the result.
+- repo: allclaws
+  posts_dir: _posts
+  site_base: https://dz3ai.github.io/allclaws
+  permalink_style: /blog/:year/:month/:day/:slug/

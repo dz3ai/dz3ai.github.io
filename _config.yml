@@ -1,0 +1,34 @@
+title: dz3ai
+description: Danny Zeng — AI agents, LLM evaluation, and inference engineering. Project notes and engineering blog.
+url: "https://dz3ai.github.io"
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title/
+
+timezone: Asia/Shanghai
+future: true
+
+author:
+  name: Danny Zeng
+  url: https://github.com/dz3ai
+
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: /feed.xml
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - scripts/
+  - .gitignore

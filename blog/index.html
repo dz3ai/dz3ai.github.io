@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="hero" style="padding-bottom:24px">
+  <h1>Blog</h1>
+  <p>Engineering notes from dz3ai projects, plus syndicated posts imported from project sites.</p>
+</section>
+
+<section class="section">
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+  <div class="year-group">
+    <h3>{{ year.name }}</h3>
+    <ul class="post-list">
+      {% for post in year.items %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span> ·
+        <a class="post-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.source_repo %}<span class="source-badge">{{ post.source_repo }}</span>{% endif %}
+        {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>

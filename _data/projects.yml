@@ -1,0 +1,36 @@
+# Curated list of dz3ai public projects shown on the homepage.
+# Fields: repo (required), description, site (optional live URL), fork (true for forks)
+- repo: alleval
+  description: Open-source LLM evaluation workspace for enterprise on-premise deployments — 8 OSS eval/observability tools as pinned submodules with license and maintenance guidance.
+  site: https://github.com/dz3ai/alleval
+- repo: allclaws
+  description: Personal AI agent ecosystem analysis and testing — hands-on evaluations of 20+ agent frameworks, with a live Jekyll site.
+  site: https://dz3ai.github.io/allclaws/
+- repo: robot-hands-eval
+  description: Monorepo of open-source robotic hand and arm projects.
+- repo: coder_arena
+  description: Coding agent comparison and benchmark.
+- repo: DeepInfer
+  description: High-performance, large-scale inference framework for DeepSeek models.
+  fork: true
+- repo: deepseek-harness
+  description: Everything is a Plugin — DeepSeek coding-agent harness.
+  fork: true
+- repo: tokenspeed
+  description: Speed-of-light LLM inference engine.
+  fork: true
+- repo: opencode-moa
+  description: Smart model routing for OpenCode — send easy work to Flash models, hard work to flagships; ~90% token savings.
+  fork: true
+- repo: colibri
+  description: Run GLM-5.2 (744B MoE) on a 25GB-RAM consumer machine — pure C, experts streamed from disk.
+  fork: true
+- repo: ds4local
+  description: DeepSeek local inference engine for Metal, CUDA and ROCm.
+  fork: true
+- repo: book-to-skill
+  description: Turn any technical book PDF into a Claude Code skill.
+  fork: true
+- repo: RepoWiki
+  description: Open-source DeepWiki alternative — generate wiki documentation for any codebase.
+  fork: true

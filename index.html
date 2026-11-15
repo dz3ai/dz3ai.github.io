@@ -1,0 +1,46 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <h1>dz3ai</h1>
+  <p>Danny Zeng — building and evaluating open-source AI agent stacks, LLM evaluation platforms, and inference infrastructure for enterprise on-prem deployment.</p>
+  <div class="links">
+    <a href="{{ '/blog/' | relative_url }}">Read the blog →</a>
+    <a href="https://github.com/dz3ai?tab=repositories&q=&type=source">All repos →</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Projects</h2>
+  <div class="proj-grid">
+    {% for p in site.data.projects %}
+    <div class="proj">
+      <h3><a href="https://github.com/dz3ai/{{ p.repo }}">{{ p.repo }}</a>{% if p.fork %}<span class="fork-badge">fork</span>{% endif %}</h3>
+      <p>{{ p.description }}</p>
+      {% if p.site %}<a class="proj-site" href="{{ p.site }}">live site →</a>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <h2>Recent posts</h2>
+  {% assign recent = site.posts | slice: 0, 5 %}
+  {% if recent.size == 0 %}
+  <p>No posts yet.</p>
+  {% else %}
+  <ul class="post-list">
+    {% for post in recent %}
+    <li>
+      <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span> ·
+      <a class="post-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.source_repo %}<span class="source-badge">{{ post.source_repo }}</span>{% endif %}
+      {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <p style="margin-top:20px"><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
+  {% endif %}
+</section>
